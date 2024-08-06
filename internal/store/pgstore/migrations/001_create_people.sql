@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS rooms (
     "theme" VARCHAR(255) NOT NULL
 )
 ---- create above / drop below ----
-DROP TABLE IF EXISTS rooms;
+DROP TABLE IF EXISTS rooms

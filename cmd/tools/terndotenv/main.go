@@ -14,8 +14,7 @@ func main() {
 		return
 	}
 
-	// Debug print environment variables
-	fmt.Println("DATABASE_PORT:", os.Getenv("DATABASE_PORT"))
+	fmt.Println("WEB_SOCKET_PORT:", os.Getenv("WEB_SOCKET_PORT"))
 	fmt.Println("DATABASE_NAME:", os.Getenv("DATABASE_NAME"))
 	fmt.Println("DATABASE_USER:", os.Getenv("DATABASE_USER"))
 	fmt.Println("DATABASE_PASSWD:", os.Getenv("DATABASE_PASSWD"))
@@ -30,7 +29,6 @@ func main() {
 		"./internal/store/pgstore/migrations/tern.conf",
 	)
 
-	// Capture combined output of stdout and stderr
 	output, err := cmd.CombinedOutput()
 	if err != nil {
 		fmt.Printf("Command execution failed with error: %v\n", err)
